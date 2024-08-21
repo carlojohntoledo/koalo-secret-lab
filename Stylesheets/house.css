@@ -1,0 +1,261 @@
+.window
+{
+    position: absolute;
+    background-image: url('../Images/window2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 9%;
+    height: 45%;
+    z-index: 1;
+    /* border: 1px solid red; */
+}
+
+#windowone
+{
+    transform: translate(60%, 68%);
+}
+
+#windowtwo
+{
+    transform: translate(380%, 68%);
+}
+
+.door
+{
+    position: absolute;
+    background-image: url('../Images/door.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 10.5%;
+    height: 70%;
+    transform: translateX(175%);
+    bottom: 0;
+    z-index: 1;
+    /* border: 1px solid red; */
+
+}
+
+.chimni
+{
+    position: absolute;
+    background-image: url('../Images/chimni.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 13%;
+    height: 100%;
+    transform: translateX(370%);
+    bottom: 0;
+    z-index: 1;
+    /* border: 1px solid red; */
+}
+
+
+
+.bookshelf
+{
+    position: absolute;
+    background-image: url('../Images/bookshelf.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 11%;
+    height: 78%;
+    bottom: 0;
+    z-index: 2;
+    transition: transform 2s ease-out;
+    /* border: 1px solid red; */
+}
+
+#bookshelfone
+{
+    transform: translateX(600%);
+
+}
+
+.lefttrophies
+{
+    position: absolute;
+    background-image: url('../Images/leftshelftrophies.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 26%;
+    top: 0;
+    transform: translateY(-91%);
+    z-index: 2;
+    /* border: 1px solid red; */
+}
+
+#bookshelftwo
+{
+    left: 77%;
+    transform: scaleX(-1);
+
+}
+
+.righttrophies
+{
+    position: absolute;
+    background-image: url('../Images/rightshelftrophies.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 26%;
+    top: 0;
+    transform: scaleX(-1) translateY(-88%);
+    z-index: 2;
+    /* border: 1px solid red; */
+}
+
+.secretdoor
+{
+    position: absolute;
+    background-image: url('../Images/elevator.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 15.5%;
+    height: 78%;
+    bottom: 0;
+    z-index: 1;
+    transition: transform 2s ease-in-out;
+    /* border: 1px solid red; */
+    transform: translateX(450%);
+}
+
+.door-container
+{
+    /* border: 1px solid red; */
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 73%;
+    height: 88%;
+    overflow: hidden;
+    cursor: pointer;
+    
+}
+
+.elevatordoor
+{
+    transition: transform 1s linear;
+}
+
+#leftdoor
+{
+    position: absolute;
+    background-image: url('../Images/elevatorleftdoor.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    /* border: 1px solid red; */
+}
+
+#rightdoor
+{
+    position: absolute;
+    background-image: url('../Images/elevatorrighdoor.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+    transform: translateX(100%);
+    bottom: 0;
+    /* border: 1px solid red; */
+}
+
+.chair
+{
+    position: absolute;
+    background-image: url('../Images/sofa.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 8%;
+    height: 30%;
+    bottom: 0;
+    z-index: 2;
+    /* border: 1px solid red; */
+    
+}
+
+#chairone
+{
+    transform: translateX(850%);
+}
+
+#chairtwo
+{
+    left: 90%;
+    transform: scaleX(-1);
+}
+
+.plant
+{
+    position: absolute;
+    background-image: url('../Images/plant.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 3%;
+    height: 35%;
+    bottom: 0;
+    z-index: 2;
+    /* border: 1px solid red; */
+}
+
+#plantone
+{
+    left: 15%;
+}
+#planttwo
+{
+    left: 30%
+}
+#plantthree
+{
+    right: 3%;
+}
+
+.switch
+{
+    position: absolute;
+    background-image: url('../Images/switch.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 1%;
+    height: 8%;
+    left: 30%;
+    top: 50%;
+    z-index: 2;
+    cursor: pointer;
+    /* border: 1px solid red; */
+}
+
+.photoframe
+{
+    position: absolute;
+    background-image: url('../Images/photo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 3%;
+    height: 18%;
+    left: 45%;
+    top: 40%;
+    z-index: 2;
+    cursor: pointer;
+    /* border: 1px solid red; */
+}

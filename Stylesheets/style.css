@@ -1,0 +1,163 @@
+
+
+
+html {
+    outline: none;
+}
+
+body {
+    display: block;
+    background-color: #82CAFF;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    outline: none; /* Remove outline */
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight color */
+}
+
+.tracking-area {
+    background-color: #82CAFF;
+    width: 100vw;
+    display: flex;
+    /* overflow-y: hidden; */
+    overflow-x: auto;
+    /* border: 2px dashed; */
+    
+}
+
+.fixed-container
+{
+    /* border: 1px solid red; */
+    position: absolute;
+    min-width: 250%;
+    background-image: url("../Images/woodenhousebackground.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.landscape-warning {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(17, 17, 17);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1000;
+    font-size: 1.5em;
+}
+
+.fullscreen-button {
+    display: block;
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    min-width: 10%;
+    padding: 15px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 13;
+}
+
+
+@media only screen and (min-width: 660px) and (orientation: landscape) {
+    .fixed-container {
+        min-width: 302dvw;
+    }
+
+    /* NEED TO FIX THE CHARACTER'S HEAD */
+}
+
+@media only screen and (min-width: 730px) and (orientation: landscape) {
+    .fixed-container {
+        min-width: 261dvw;
+    }
+
+
+}
+
+@media only screen and (min-width: 760px) and (orientation: landscape) {
+    .fixed-container {
+        min-width: 251dvw;
+    }
+
+
+}
+
+@media only screen and (min-width: 840px) and (orientation: landscape) {
+    .fixed-container {
+        min-width: 249dvw;
+    }
+
+
+}
+
+@media only screen and (min-width: 860px) and (orientation: landscape) {
+    .fixed-container {
+        min-width: 258.5dvw;
+    }
+
+
+}
+
+
+@media only screen and (min-width: 890px) and (orientation: landscape) {
+    .fixed-container {
+        min-width: 248dvw;
+    }
+
+
+}
+
+@media only screen and (min-width: 910px) and (orientation: landscape) {
+    .fixed-container {
+        min-width: 241.5dvw;
+    }
+
+
+}
+
+@media only screen and (min-width: 930px) and (orientation: landscape) {
+    .fixed-container {
+        min-width: 249.5dvw;
+    }
+
+
+}
+
+@media only screen and (min-height: 745px) and (orientation: landscape) {
+    .fixed-container {
+        min-width: 297dvw;
+    }
+    /* NEED TO FIX THE CHARACTER'S HEAD */
+
+}
+
+
+
+@media only screen and (orientation: portrait) {
+    .landscape-warning {
+        display: flex;
+        overflow: hidden;
+    }
+
+
+}

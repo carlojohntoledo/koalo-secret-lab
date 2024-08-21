@@ -1,0 +1,77 @@
+#intro-screen, #loading-screen, #main-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #f0f0f0;
+}
+#intro-screen {
+    background-color: #000;
+    color: #fff;
+    transition: background-color 3s ease-out;
+}
+#intro-screen.fade-out {
+    background-color: #FFF;
+}
+
+.koalotitle
+{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%,-50%);
+    background-image: url("../Images/title.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 12;
+    width: 70%;
+    height: 40%;
+    /* border: 1px solid red; */
+}
+#main-menu {
+    display: none;
+    /* border: 1px solid red; */
+    position: absolute;
+    min-width: 100%;
+    background-image: url("../Images/profilelaboratory.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    backdrop-filter: blur(3px);
+}
+#loading-screen {
+    display: none;
+    background-color: #ddd;
+    flex-direction: column;
+}
+#progress-bar-container {
+    width: 80%;
+    background-color: #bbb;
+}
+#progress-bar {
+    width: 0;
+    height: 30px;
+    background-color: #4caf50;
+}
+
+.house
+{
+    display: none;
+}
+
+#enter-button
+{
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 1rem;
+    border: 2px solid #343434;
+}
