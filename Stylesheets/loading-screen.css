@@ -62,7 +62,7 @@
 
 .house
 {
-    display: none;
+    display: flex; /* this should be "none" */
 }
 
 #enter-button

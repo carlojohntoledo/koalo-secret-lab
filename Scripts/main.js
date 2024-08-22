@@ -60,41 +60,41 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    if (isLandscape()) {
-        preloadSomeResources().then(() => {
-            setTimeout(() => {
-                document.getElementById('intro-screen').classList.add('fade-out');
-                setTimeout(() => {
-                    document.getElementById('intro-screen').style.display = 'none';
-                    document.getElementById('main-menu').style.display = 'flex';
-                }, 3000);
-            }, 3000);
-        });
-    } else {
-        document.getElementById('main-menu').style.display = 'flex';
-    }
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//     if (isLandscape()) {
+//         preloadSomeResources().then(() => {
+//             setTimeout(() => {
+//                 document.getElementById('intro-screen').classList.add('fade-out');
+//                 setTimeout(() => {
+//                     document.getElementById('intro-screen').style.display = 'none';
+//                     document.getElementById('main-menu').style.display = 'flex';
+//                 }, 3000);
+//             }, 3000);
+//         });
+//     } else {
+//         document.getElementById('main-menu').style.display = 'flex';
+//     }
+// });
 
-document.getElementById('enter-button').addEventListener('click', () => {
-    document.documentElement.requestFullscreen().then(() => {
-        document.getElementById('main-menu').style.display = 'none';
-        document.getElementById('loading-screen').style.display = 'flex';
-        preloadRemainingResources().then(() => {
-            setTimeout(() => {
-                document.getElementById('loading-screen').classList.add('fade-out');
-                setTimeout(() => {
-                    document.getElementById('loading-screen').style.display = 'none';
-                    document.getElementById('first-scene').style.display = 'flex';
-                }, 3000);
-            }, 1000);
-        });
-    });
-});
+// document.getElementById('enter-button').addEventListener('click', () => {
+//     document.documentElement.requestFullscreen().then(() => {
+//         document.getElementById('main-menu').style.display = 'none';
+//         document.getElementById('loading-screen').style.display = 'flex';
+//         preloadRemainingResources().then(() => {
+//             setTimeout(() => {
+//                 document.getElementById('loading-screen').classList.add('fade-out');
+//                 setTimeout(() => {
+//                     document.getElementById('loading-screen').style.display = 'none';
+//                     document.getElementById('first-scene').style.display = 'flex';
+//                 }, 3000);
+//             }, 1000);
+//         });
+//     });
+// });
 
-function isLandscape() {
-    return window.innerWidth > window.innerHeight;
-}
+// function isLandscape() {
+//     return window.innerWidth > window.innerHeight;
+// }
 
 function preloadSomeResources() {
     const resources = [

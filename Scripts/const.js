@@ -38,18 +38,18 @@ function adjustHeight() {
     }
 }
 
-const introScreen = document.getElementById('intro-screen');
-function checkOrientation() {
-    if (window.innerHeight > window.innerWidth && window.innerWidth <= 768) {
-        warning.style.display = 'flex';
-        introScreen.style.display = 'none';
-    } else {
-        warning.style.display = 'none';
-        introScreen.style.display = 'flex';
-        // fullscreenButton.style.display = 'flex';
-        // goFullscreen();
-    }
-}
+// const introScreen = document.getElementById('intro-screen');
+// function checkOrientation() {
+//     if (window.innerHeight > window.innerWidth && window.innerWidth <= 768) {
+//         warning.style.display = 'flex';
+//         introScreen.style.display = 'none';
+//     } else {
+//         warning.style.display = 'none';
+//         introScreen.style.display = 'flex';
+//         // fullscreenButton.style.display = 'flex';
+//         // goFullscreen();
+//     }
+// }
 
 function goFullscreen() {
     if (document.documentElement.requestFullscreen) {
@@ -102,4 +102,4 @@ window.addEventListener('orientationchange', () => {
 
 // Initial check
 adjustHeight();
-checkOrientation();
+// checkOrientation();

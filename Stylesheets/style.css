@@ -37,7 +37,7 @@ body {
 {
     /* border: 1px solid red; */
     position: absolute;
-    min-width: 250%;
+    width: calc(100vh * 5.38);
     background-image: url("../Images/woodenhousebackground.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -78,14 +78,14 @@ body {
 }
 
 
-@media only screen and (min-width: 660px) and (orientation: landscape) {
+/* @media only screen and (min-width: 660px) and (orientation: landscape) {
     .fixed-container {
         min-width: 302dvw;
-    }
+    } */
 
     /* NEED TO FIX THE CHARACTER'S HEAD */
-}
-
+/* } */
+/* 
 @media only screen and (min-width: 730px) and (orientation: landscape) {
     .fixed-container {
         min-width: 261dvw;
@@ -133,25 +133,33 @@ body {
     }
 
 
-}
+} */
 
-@media only screen and (min-width: 930px) and (orientation: landscape) {
+@media only screen and (min-height: 760px) and (orientation: landscape) {
     .fixed-container {
-        min-width: 249.5dvw;
+        width: calc(100vh * 5.38);
     }
 
 
 }
 
+@media only screen and (min-height: 820px) and (orientation: landscape) {
+    .fixed-container {
+        width: calc(100vh * 5.29);
+    }
+
+
+}
+/* 
 @media only screen and (min-height: 745px) and (orientation: landscape) {
     .fixed-container {
         min-width: 297dvw;
-    }
+    } */
     /* NEED TO FIX THE CHARACTER'S HEAD */
 
-}
+/* } */
 
-
+/* 
 
 @media only screen and (orientation: portrait) {
     .landscape-warning {
@@ -160,4 +168,4 @@ body {
     }
 
 
-}
+} */
