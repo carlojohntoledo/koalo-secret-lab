@@ -7,12 +7,16 @@ const bars = document.querySelectorAll('.bar');
 hideArea.addEventListener('click', hidePuzzle);
 puzzlebox.addEventListener('click', showPuzzle);
 
+let isOpen = false;
+
 function showPuzzle() {
     puzzleBackground.style.display = 'flex';
+    isOpen = true;
 }
 
 function hidePuzzle() {
     puzzleBackground.style.display = 'none';
+    isOpen = false;
 }
 
 const barNames = ['first', 'second', 'third'];
@@ -43,7 +47,7 @@ bar.addEventListener('click', () => {
     });
 
     // Check if the specific condition is met
-    if (currentValues[0] === 'Face' && currentValues[1] === 'Sleep' && currentValues[2] === 'Leaf') {
+    if (currentValues[0] === 'Face' && currentValues[1] === 'Sleep' && currentValues[2] === 'Leaf' && isOpen === false) {
         openBookshelf();
     }
 });
