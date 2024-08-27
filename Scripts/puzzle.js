@@ -42,12 +42,12 @@ bars.forEach((bar, index) => {
     console.log(`The ${barNames[index]} bar is: ${defaultPartValue}`);
 
     bar.addEventListener('click', () => {
-        scrollPosition += 72.35;
-        if (scrollPosition > 72.35 * 4) scrollPosition = 0;
+        scrollPosition += 25.25;
+        if (scrollPosition > 25.25 * 4) scrollPosition = 0;
         bar.style.backgroundPositionY = `${scrollPosition}%`;
 
         // Calculate the current viewable part
-        let partIndex = Math.floor(scrollPosition / 72.35); // Each part is 20% of the height
+        let partIndex = Math.floor(scrollPosition / 25.25); // Each part is 20% of the height
         let partValue = values[partIndex % values.length];
 
         currentValues[index] = partValue;

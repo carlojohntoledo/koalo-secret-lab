@@ -25,7 +25,7 @@ body {
 
 .tracking-area {
     background-color: #82CAFF;
-    width: 100vw;
+    width: 100dvw;
     display: flex;
     /* overflow-y: hidden; */
     overflow-x: auto;
