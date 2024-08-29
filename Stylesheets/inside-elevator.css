@@ -51,14 +51,106 @@ body {
     z-index: 2;
 }
 
-.elevatordoor
-{   
+.scanner {
     position: absolute;
-    border: 1px solid orange;
+    border: 0.6dvh solid rgb(82, 176, 195);
+    width: 5%;
+    height: 15%;
+    z-index: 3;
+    left: 70.3%;
+    top: 70.2%;
+    box-shadow: 0px 0px 6px 1px rgb(97, 203, 233);
+    overflow: hidden; /* Ensure the scanline stays within the scanner */
+}
+
+.scanline {
+    position: absolute;
     width: 100%;
     height: 100%;
+    background: rgba(97, 203, 233, 0.3); /* Slightly transparent blue */
+    top: -100%; /* Start off-screen (above the scanner) */
+    left: 0;
+    box-shadow: 0px 0px 15px 5px rgba(97, 203, 233, 0.8); /* Glow effect */
+    transform: translateY(0%);
+    transition: transform 2s ease-in-out;
+    opacity: 0;
+}
+
+.scanner.active .scanline {
+    transform: translateY(100%); /* Move the scanline from top to bottom */
+    opacity: 1;
+}
+
+
+.lcd
+{   
+    position: absolute;
+    border: 0.6dvh solid rgb(82, 176, 195);
+    width: 11%;
+    height: 42.5%;
     z-index: 3;
+    left: 55%;
+    top: 42%;
     transition: transform 1s linear;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    -webkit-box-shadow:0px 0px 10px 5px rgb(82, 176, 195);
+    -moz-box-shadow: 0px 0px 10px 5px rgb(82, 176, 195);
+    box-shadow: 0px 0px 10px 5px rgb(82, 176, 195);
+    /* transform: translate(70%, 60%); */
+}
+
+.floor
+{
+    position: relative;
+    border: 0.6dvh solid rgb(97, 203, 233);
+    width: 90%;
+    height: 15%; 
+    color: rgb(97, 203, 233);
+    display: flex;
+    -webkit-box-shadow:0px 0px 6px 1px rgb(97, 203, 233);
+    -moz-box-shadow: 0px 0px 6px 1px rgb(97, 203, 233);
+    box-shadow: 0px 0px 6px 1px rgb(97, 203, 233);
+}
+
+.floor p
+{
+    margin: auto;
+    font-size: calc(100dvh * 0.025);
+    font-weight: bold;
+    text-shadow: rgb(97, 203, 233) 0px 0px 12px;
+}
+
+.floor:hover
+{
+    border: 0.6dvh solid rgb(74, 118, 131);
+    color: rgb(74, 118, 131);
+    -webkit-box-shadow:0px 0px 6px 1px rgb(74, 118, 131);
+    -moz-box-shadow: 0px 0px 6px 1px rgb(74, 118, 131);
+    box-shadow: 0px 0px 6px 1px rgb(74, 118, 131);
+}
+
+.lcdlabel
+{
+    position: relative;
+    width: 90%;
+    height: 15%; 
+    color: rgb(74, 118, 131);
+    display: flex;
+    font-size: 0.8em;
+    text-align: center;
+    margin: auto;
+    font-weight: bold;
+    font-size: calc(100dvh * 0.02);
+    align-items: center;
+}
+
+.lcdlabel p
+{
+    margin: auto;
 }
 
 #leftdoor

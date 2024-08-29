@@ -1,6 +1,7 @@
 const leftInsideDoor = document.getElementById('leftdoor');
 const rightInsideDoor = document.getElementById('rightdoor');
-const elevatorInsideDoor = document.querySelector('.elevatordoor');
+const scanner = document.querySelector('.scanner');
+const scanline = document.querySelector('.scanline');
 
 // Variable to keep track of door state
 let doorsOpen = false;
@@ -8,16 +9,28 @@ let doorsOpen = false;
 // Variable to check if a transition is in progress
 let transitionInProgress = false;
 
-// Add event listener to elevator door to handle click
-elevatorInsideDoor.addEventListener('click', toggleElevatorDoors);
+// Add event listener to scanner to handle click
+scanner.addEventListener('click', startScan);
 
-// Add event listeners to doors for transition end events
-leftInsideDoor.addEventListener('transitionend', onTransitionEnd);
-rightInsideDoor.addEventListener('transitionend', onTransitionEnd);
+function startScan() {
+    if (transitionInProgress) return; // Ignore clicks if a transition is in progress
+
+    transitionInProgress = true; // Set transition flag to true
+
+    // Start the scanning animation
+    scanner.classList.add('active');
+
+    // Wait for the scanning animation to complete
+    scanline.addEventListener('transitionend', function() {
+        // Proceed with opening or closing the doors
+        toggleElevatorDoors();
+
+        // Remove the 'active' class after the scan completes
+        scanner.classList.remove('active');
+    }, { once: true }); // The listener is automatically removed after being called once
+}
 
 function toggleElevatorDoors() {
-    if (transitionInProgress) return; // Ignore clicks if transition is in progress
-
     if (doorsOpen) {
         closeElevatorInside();
     } else {
@@ -60,3 +73,7 @@ function onTransitionEnd(event) {
         }
     }
 }
+
+// Add event listeners to doors for transition end events
+leftInsideDoor.addEventListener('transitionend', onTransitionEnd);
+rightInsideDoor.addEventListener('transitionend', onTransitionEnd);

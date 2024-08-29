@@ -116,5 +116,14 @@ elevatordoor.addEventListener('click', openElevator);
 function openElevator() {
     leftdoor.style.transform = "translateX(-100%)";
     rightdoor.style.transform = "translateX(200%)";
+// Add an event listener to detect when the transition ends
+leftdoor.addEventListener('transitionend', navigateToNextPage);
 }
 
+function navigateToNextPage(event) {
+    // Ensure this only runs for the 'transform' property transition
+    if (event.propertyName === 'transform') {
+        // Navigate to another HTML page
+        window.location.href = 'insideElevator.html'; // Replace with your target page
+    }
+}
