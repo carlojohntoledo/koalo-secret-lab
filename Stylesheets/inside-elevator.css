@@ -26,7 +26,7 @@ body {
 {
     /* border: 1px solid red; */
     position: absolute;
-    width: calc(100dvh * 2.17);
+    width: calc(100dvh * 2.7);
     background-image: url("../Images/InsideWoodenWall.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -41,7 +41,7 @@ body {
 {
     /* border: 1px solid red; */
     position: absolute;
-    width: calc(100dvh * 2.17);
+    width: calc(100dvh * 2.7);
     background-image: url("../Images/InsideElevator.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -54,10 +54,10 @@ body {
 .scanner {
     position: absolute;
     border: 0.6dvh solid rgb(82, 176, 195);
-    width: 5%;
+    width: 4%;
     height: 15%;
     z-index: 3;
-    left: 70.3%;
+    left: 56.3%;
     top: 70.2%;
     box-shadow: 0px 0px 6px 1px rgb(97, 203, 233);
     overflow: hidden; /* Ensure the scanline stays within the scanner */
@@ -86,10 +86,10 @@ body {
 {   
     position: absolute;
     border: 0.6dvh solid rgb(82, 176, 195);
-    width: 11%;
+    width: 9%;
     height: 42.5%;
     z-index: 3;
-    left: 55%;
+    left: 43.9%;
     top: 42%;
     transition: transform 1s linear;
     align-items: center;
