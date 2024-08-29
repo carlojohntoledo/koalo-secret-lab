@@ -65,14 +65,16 @@ body {
 .fullscreen-button {
     display: block;
     position: fixed;
+    background-image: url("../Images/fullscreen.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
     bottom: 2%;
     right: 2%;
-    min-width: 10%;
-    padding: 15px 20px;
-    background-color: #007bff;
-    color: #fff;
+    width: calc(0.6dvh * 10);
+    height: 6%;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
     z-index: 13;
 }

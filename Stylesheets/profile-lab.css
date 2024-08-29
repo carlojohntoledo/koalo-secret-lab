@@ -24,5 +24,5 @@
     z-index: 1;
     transition: transform 2s ease-in-out;
     /* border: 1px solid red; */
-    transform: translateX(500%);
+    transform: translateX(545%);
 }
