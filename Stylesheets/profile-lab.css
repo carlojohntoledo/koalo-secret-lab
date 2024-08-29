@@ -1,0 +1,28 @@
+.fixed-container-profile-lab
+{
+    /* border: 1px solid red; */
+    position: absolute;
+    width: calc(100dvh * 5.4);
+    background-image: url("../Images/profilelaboratory.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100dvh;
+}
+
+
+.profile-lab-elevator
+{
+    position: absolute;
+    background-image: url('../Images/elevator.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 15.5%;
+    height: 78%;
+    bottom: 0;
+    z-index: 1;
+    transition: transform 2s ease-in-out;
+    /* border: 1px solid red; */
+    transform: translateX(500%);
+}

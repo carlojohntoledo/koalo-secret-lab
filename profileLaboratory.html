@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <link rel="icon" href="Images/koalo.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="Stylesheets/style.css">
+    <link rel="stylesheet" href="Stylesheets/loading-screen.css">
+    <link rel="stylesheet" href="Stylesheets/house.css">
+    <link rel="stylesheet" href="Stylesheets/character.css">
+    <link rel="stylesheet" href="Stylesheets/animation.css">
+    <link rel="stylesheet" href="Stylesheets/puzzle.css">
+    <link rel="stylesheet" href="Stylesheets/profile-lab.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="house" id="first-scene">
+        <div class="tracking-area" id="tracking-area">
+          <div class="fixed-container-profile-lab" id="fixed-container">
+    
+            <div class="profile-lab-elevator" id="secretdoor">
+              <div class="door-container">
+                <div class="elevatordoor" id="leftdoor"></div>
+                <div class="elevatordoor" id="rightdoor"></div>
+              </div>
+            </div>
+    
+          <div class="character" id="character">
+    
+            <div class="left-arm" id="left-arm">
+              <div class="left-arm-wave"></div>
+            </div>
+    
+            <div class="sleepyhead" id="sleepyhead">
+              <div id="floatingZs" class="floating-zs"></div>
+            </div>
+            <div class="head" id="head">
+              <div class="eye" id="left-eye">
+                <div class="pupil" id="left-eye-pupil"></div>
+                <div class="eyelid"></div>
+              </div>
+              <div class="space"></div>
+              <div class="eye" id="right-eye">
+                <div class="pupil"id="right-eye-pupil"></div>
+                <div class="eyelid"></div>
+              </div>
+            </div>
+    
+            <div class="body" id="characterbody"></div>
+            <div class="ears" id="ears"></div>
+            
+          </div>
+          
+          
+          <button class="fullscreen-button" id="fullscreenButton">Enter Fullscreen</button>
+    
+        </div>
+      </div>
+      
+      <script src="Scripts/const.js"></script>
+      <script src="Scripts/handlemouse.js"></script>
+      <script src="Scripts/handlemouseLeave.js"></script>
+      <script src="Scripts/handlemouseEnter.js"></script>
+      <script src="Scripts/animation.js"></script>
+      <script src="Scripts/puzzle.js"></script>
+      <script src="Scripts/BackgroundScroll.js"></script>
+      <script src="Scripts/main.js"></script>
+</body>
+</html>

@@ -70,6 +70,8 @@ function onTransitionEnd(event) {
         if (Array.from(leftInsideDoor.style.transition.split(' ')).includes('transform') && 
             Array.from(rightInsideDoor.style.transition.split(' ')).includes('transform')) {
             transitionInProgress = false; // Reset transition flag
+
+            window.location.href = 'profileLaboratory.html';
         }
     }
 }
