@@ -117,3 +117,4 @@ function openElevator() {
     leftdoor.style.transform = "translateX(-100%)";
     rightdoor.style.transform = "translateX(200%)";
 }
+

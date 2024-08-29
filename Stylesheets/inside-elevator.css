@@ -1,0 +1,102 @@
+
+html {
+    outline: none;
+}
+
+body {
+    display: block;
+    background-color: #000000;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-y: hidden;
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    outline: none; /* Remove outline */
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight color */
+}
+
+.container 
+{
+    /* border: 1px solid red; */
+    position: absolute;
+    width: calc(100dvh * 2.17);
+    background-image: url("../Images/InsideWoodenWall.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100dvh;
+    overflow: hidden;
+    z-index: 1;
+}
+
+
+.insideElevator 
+{
+    /* border: 1px solid red; */
+    position: absolute;
+    width: calc(100dvh * 2.17);
+    background-image: url("../Images/InsideElevator.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100dvh;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.elevatordoor
+{   
+    position: absolute;
+    border: 1px solid orange;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    transition: transform 1s linear;
+}
+
+#leftdoor
+{
+    transition: transform 1s linear;
+    
+}
+
+#rightdoor
+{
+    transition: transform 1.5s linear;
+}
+
+
+#leftdoor
+{
+    /* border: 1px solid red; */
+    position: absolute;
+    width: calc(100dvh * 0.196);
+    background-image: url("../Images/InsideElevatorLeftdoor.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100dvh;
+    transform: translateX(0%);
+}
+
+#rightdoor
+{
+    /* border: 1px solid blue; */
+    position: absolute;
+    width: calc(100dvh * 0.825);
+    background-image: url("../Images/InsideElevatorRightdoor.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100dvh;
+    transform: translateX(23%);
+    /* z-index: 3; */
+}
+
