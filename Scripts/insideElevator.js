@@ -1,5 +1,5 @@
-const leftInsideDoor = document.getElementById('leftdoor');
-const rightInsideDoor = document.getElementById('rightdoor');
+const leftInsideDoor = document.getElementById('insideElevator-leftdoor');
+const rightInsideDoor = document.getElementById('insideElevator-rightdoor');
 const scanner = document.querySelector('.scanner');
 const scanline = document.querySelector('.scanline');
 

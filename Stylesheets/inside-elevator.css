@@ -22,7 +22,7 @@ body {
     -webkit-tap-highlight-color: transparent; /* Remove tap highlight color */
 }
 
-.container 
+.elevator-container 
 {
     /* border: 1px solid red; */
     position: absolute;
@@ -165,7 +165,7 @@ body {
 }
 
 
-#leftdoor
+#insideElevator-leftdoor
 {
     /* border: 1px solid red; */
     position: absolute;
@@ -178,7 +178,7 @@ body {
     transform: translateX(0%);
 }
 
-#rightdoor
+#insideElevator-rightdoor
 {
     /* border: 1px solid blue; */
     position: absolute;
