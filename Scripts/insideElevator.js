@@ -1,6 +1,6 @@
 const leftInsideDoor = document.getElementById('insideElevator-leftdoor');
 const rightInsideDoor = document.getElementById('insideElevator-rightdoor');
-const scanner = document.querySelector('.scanner');
+const scanner = document.getElementById('lcdscanner');
 const scanline = document.querySelector('.scanline');
 
 // Variable to keep track of door state

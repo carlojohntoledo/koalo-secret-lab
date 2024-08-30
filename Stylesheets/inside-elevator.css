@@ -1,26 +1,4 @@
 
-html {
-    outline: none;
-}
-
-body {
-    display: block;
-    background-color: #000000;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-    overflow-y: hidden;
-}
-
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-    outline: none; /* Remove outline */
-    -webkit-tap-highlight-color: transparent; /* Remove tap highlight color */
-}
 
 .elevator-container 
 {
@@ -51,7 +29,7 @@ body {
     z-index: 2;
 }
 
-.scanner {
+.lcdscanner {
     position: absolute;
     border: 0.6dvh solid rgb(82, 176, 195);
     width: 4%;
@@ -76,7 +54,7 @@ body {
     opacity: 0;
 }
 
-.scanner.active .scanline {
+.lcdscanner.active .scanline {
     transform: translateY(100%); /* Move the scanline from top to bottom */
     opacity: 1;
 }

@@ -120,6 +120,8 @@ function openElevator() {
 leftdoor.addEventListener('transitionend', navigateToNextPage);
 }
 
+const pageContent = document.querySelector('.page-content');
+
 function navigateToNextPage(event) {
     // Ensure this only runs for the 'transform' property transition
     if (event.propertyName === 'transform') {
