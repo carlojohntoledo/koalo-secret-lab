@@ -63,13 +63,10 @@ body {
 }
 
 .fullscreen-button {
-    display: block;
+    display: flex;
     position: fixed;
-    background-image: url("../Images/fullscreen.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     background-color: transparent;
+    justify-content: flex-start;
     bottom: 2%;
     right: 2%;
     width: calc(0.6dvh * 10);
@@ -77,7 +74,64 @@ body {
     border: none;
     cursor: pointer;
     z-index: 13;
+    /* overflow: hidden; */
+    transition-duration: .3s;
 }
+
+
+  .sign {
+    width: 100%;
+    right: 0;
+    height: 100%;
+    background-image: url("../Images/fullscreen.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition-duration: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+  }
+  
+  
+  /* text */
+  .text {
+    position: absolute;
+    left: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: calc(100dvh * 0.025);
+    font-weight: bold;
+    transition-duration: .3s;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  /* hover effect on button width */
+  .fullscreen-button:hover {
+    width: calc(100dvh * 0.325);
+    transition-duration: .3s;
+  }
+  
+  .fullscreen-button:hover .sign {
+    /* height: 100%; */
+    width: 25%;
+    transition-duration: .3s;
+    /* padding-right: 10%; */
+  }
+  /* hover effect button's text */
+  .fullscreen-button:hover .text {
+    text-align: center;
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    /* padding-left: 10%; */
+  }
+  /* button click effect*/
+  .fullscreen-button:active {
+    transform: translate(2px ,2px);
+  }
 
 
 /* @media only screen and (min-width: 660px) and (orientation: landscape) {

@@ -81,8 +81,12 @@ function handleButtonClick() {
         !document.webkitFullscreenElement && // Chrome, Safari and Opera
         !document.msFullscreenElement) { // IE/Edge
         goFullscreen();
+        fullscreenButton.innerHTML = `<div class="sign"></div>
+        <div class="text">Exit Fullscreen</div>`;
     } else {
         exitFullscreen();
+        fullscreenButton.innerHTML = `<div class="sign"></div>
+        <div class="text">Enter Fullscreen</div>`;
     }
 }
 
