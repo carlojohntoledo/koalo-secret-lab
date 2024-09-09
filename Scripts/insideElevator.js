@@ -1,81 +1,74 @@
-const leftInsideDoor = document.getElementById('insideElevator-leftdoor');
-const rightInsideDoor = document.getElementById('insideElevator-rightdoor');
-const scanner = document.getElementById('lcdscanner');
-const scanline = document.querySelector('.scanline');
+document.addEventListener('DOMContentLoaded', () => {
+    initializeElevator();
+});
 
-// Variable to keep track of door state
-let doorsOpen = false;
+console.log("Script loaded");
 
-// Variable to check if a transition is in progress
-let transitionInProgress = false;
+function initializeElevator() {
 
-// Add event listener to scanner to handle click
-scanner.addEventListener('click', startScan);
+    console.log('initializeElevator is running');
+    const leftInsideDoor = document.getElementById('insideElevator-leftdoor');
+    const rightInsideDoor = document.getElementById('insideElevator-rightdoor');
+    const scanner = document.getElementById('lcdscanner');
+    const scanline = document.querySelector('.scanline');
 
-function startScan() {
-    if (transitionInProgress) return; // Ignore clicks if a transition is in progress
-
-    transitionInProgress = true; // Set transition flag to true
-
-    // Start the scanning animation
-    scanner.classList.add('active');
-
-    // Wait for the scanning animation to complete
-    scanline.addEventListener('transitionend', function() {
-        // Proceed with opening or closing the doors
-        toggleElevatorDoors();
-
-        // Remove the 'active' class after the scan completes
-        scanner.classList.remove('active');
-    }, { once: true }); // The listener is automatically removed after being called once
-}
-
-function toggleElevatorDoors() {
-    if (doorsOpen) {
-        closeElevatorInside();
-    } else {
-        openElevatorInside();
+    if (!leftInsideDoor || !rightInsideDoor || !scanner || !scanline) {
+        console.error('One or more elements are missing.');
+        return;
     }
-    doorsOpen = !doorsOpen; // Toggle the state
-}
 
-function openElevatorInside() {
-    console.log('Door opening');
-    transitionInProgress = true; // Set transition flag to true
-    leftInsideDoor.style.transform = "translateX(-100%)";
-    leftInsideDoor.style.transitionDelay = "0s";
-    rightInsideDoor.style.transform = "translateX(120%)";
+    let doorsOpen = false;
+    let transitionInProgress = false;
 
-    // Ensure both doors are animated
-    leftInsideDoor.style.transition = "transform 0.7s linear";
-    rightInsideDoor.style.transition = "transform 1.5s linear";
-}
+    scanner.addEventListener('click', startScan);
 
-function closeElevatorInside() {
-    console.log('Door closing');
-    transitionInProgress = true; // Set transition flag to true
-    leftInsideDoor.style.transform = "translateX(0%)";
-    leftInsideDoor.style.transitionDelay = "0.5s";
-    rightInsideDoor.style.transform = "translateX(23%)";
+    function startScan() {
+        console.log("startScan function called");
+        if (transitionInProgress) return;
 
-    // Ensure both doors are animated
-    leftInsideDoor.style.transition = "transform 0.8s linear 0.7s";
-    rightInsideDoor.style.transition = "transform 1.5s linear";
-}
+        transitionInProgress = true;
+        scanner.classList.add('active');
 
-function onTransitionEnd(event) {
-    // Ensure this only runs for the transitions we care about
-    if (event.propertyName === 'transform') {
-        // Check if both doors have completed their transitions
-        if (Array.from(leftInsideDoor.style.transition.split(' ')).includes('transform') && 
-            Array.from(rightInsideDoor.style.transition.split(' ')).includes('transform')) {
-            transitionInProgress = false; // Reset transition flag
+        scanline.addEventListener('transitionend', function() {
+            toggleElevatorDoors();
+            scanner.classList.remove('active');
+        }, { once: true });
+    }
 
+    function toggleElevatorDoors() {
+        if (doorsOpen) {
+            closeElevatorInside();
+        } else {
+            openElevatorInside();
+        }
+        doorsOpen = !doorsOpen;
+    }
+
+    function openElevatorInside() {
+        transitionInProgress = true;
+        leftInsideDoor.style.transform = "translateX(-100%)";
+        rightInsideDoor.style.transform = "translateX(120%)";
+        leftInsideDoor.style.transition = "transform 0.7s linear";
+        rightInsideDoor.style.transition = "transform 1.5s linear";
+    }
+
+    function closeElevatorInside() {
+        transitionInProgress = true;
+        leftInsideDoor.style.transform = "translateX(0%)";
+        rightInsideDoor.style.transform = "translateX(23%)";
+        leftInsideDoor.style.transition = "transform 0.8s linear 0.7s";
+        rightInsideDoor.style.transition = "transform 1.5s linear";
+    }
+
+    function onTransitionEnd(event) {
+        if (event.propertyName === 'transform') {
+            transitionInProgress = false;
             window.location.href = 'profileLaboratory.html';
         }
     }
+
+    leftInsideDoor.addEventListener('transitionend', onTransitionEnd);
+    rightInsideDoor.addEventListener('transitionend', onTransitionEnd);
 }
 
-// Add event listeners to doors for transition end events
-leftInsideDoor.addEventListener('transitionend', onTransitionEnd);
-rightInsideDoor.addEventListener('transitionend', onTransitionEnd);
+initializeElevator();

@@ -34,7 +34,7 @@
     border: 0.6dvh solid rgb(82, 176, 195);
     width: 4%;
     height: 15%;
-    z-index: 3;
+    z-index: 99;
     left: 56.3%;
     top: 70.2%;
     box-shadow: 0px 0px 6px 1px rgb(97, 203, 233);
@@ -131,13 +131,13 @@
     margin: auto;
 }
 
-#leftdoor
+#insideElevator-leftdoor
 {
     transition: transform 1s linear;
     
 }
 
-#rightdoor
+#insideElevator-rightdoor
 {
     transition: transform 1.5s linear;
 }
