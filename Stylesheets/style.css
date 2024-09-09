@@ -65,13 +65,15 @@ body {
 .fullscreen-button {
     display: flex;
     position: fixed;
-    background-color: transparent;
+    padding-right: 5%;
+    border: calc(100dvh * 0.005) solid black;
+    background-color: rgb(156, 111, 71);
     justify-content: flex-start;
-    bottom: 2%;
-    right: 2%;
+    top: 2%;
+    right: 0%;
     width: calc(0.6dvh * 10);
-    height: 6%;
-    border: none;
+    height: 7%;
+    border-right: none;
     cursor: pointer;
     z-index: 13;
     /* overflow: hidden; */
@@ -89,7 +91,7 @@ body {
     background-size: contain;
     transition-duration: 0.3s;
     display: flex;
-    align-items: center;
+    align-items: left;
     justify-content: center;
     position: absolute;
   }
@@ -193,7 +195,7 @@ body {
 
 @media only screen and (min-height: 760px) and (orientation: landscape) {
     .fixed-container {
-        width: calc(100dvh * 5.3);
+        width: calc(100dvh * 5.4);
     }
 
 
@@ -206,6 +208,14 @@ body {
 
 
 }
+
+/* @media only screen and (min-height: 20px) and (orientation: landscape) {
+    .fixed-container {
+        width: calc(100dvh * 5.4);
+    }
+
+
+} */
 /* 
 @media only screen and (min-height: 745px) and (orientation: landscape) {
     .fixed-container {

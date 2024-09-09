@@ -51,3 +51,17 @@ function adjustHeight() {
 //     }
 // }
 
+window.addEventListener('beforeunload', (event) => {
+    // Customize this message based on your needs
+    const warningMessage = "You have unsaved changes. If you leave this page, your current progress may be lost.";
+
+    // For modern browsers, you need to call preventDefault
+    event.preventDefault(); // Necessary for Chrome and some other browsers
+
+    // Modern browsers will show their own standard message
+    event.returnValue = warningMessage; // Set the custom message for legacy browsers
+
+    // Optional: Return the warningMessage for legacy support
+    return warningMessage;
+});
+
