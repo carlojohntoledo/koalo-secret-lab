@@ -11,6 +11,7 @@ function initializeElevator() {
     const scanner = document.getElementById('lcdscanner');
     const scanline = document.querySelector('.scanline');
     const floors = document.querySelectorAll('.floor');
+    const elevatorContainer = document.querySelector('.elevator-container');
     let selectedFloor = null; // Variable to track the selected floor
     let doorsOpen = true;
     let transitionInProgress = false;
@@ -104,7 +105,8 @@ function initializeElevator() {
                 let targetPage;
                 switch (selectedFloor.id) {
                     case 'profile':
-                        targetPage = 'profileLaboratory.html';
+                        targetPage = '#';
+                        elevatorContainer.style.backgroundImage = `url('./Images/profilelaboratory.png')`;
                         break;
                     case 'skills':
                         targetPage = '#';
