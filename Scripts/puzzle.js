@@ -43,6 +43,12 @@ bars.forEach((bar, index) => {
 
     bar.addEventListener('click', () => {
         scrollPosition += 25.25;
+
+        var puzzlesfx = new Audio ('./SFX/mixkit-magical-stone-slide-1528.wav');
+        puzzlesfx.play();
+        puzzlesfx.playbackRate = 1.5;
+        puzzlesfx.volume = 0.5;
+
         if (scrollPosition > 25.25 * 4) scrollPosition = 0;
         bar.style.backgroundPositionY = `${scrollPosition}%`;
 
@@ -70,6 +76,13 @@ bars.forEach((bar, index) => {
 
 function openBookshelf() {
     console.log("Bookshelf opened");
+
+    // Create an audio object and play the sound
+    var bookshelfsfx = new Audio('./SFX/wooden-slide-door-sound-227004.mp3'); // Path to your sound file
+    bookshelfsfx.play();
+    bookshelfsfx.playbackRate = 1.3;
+    bookshelfsfx.volume = 1;
+    
     leftshelf.style.transform = "translateX(535%)";
     rightshelf.style.transform = "translateX(74%) scaleX(-1)";
 }

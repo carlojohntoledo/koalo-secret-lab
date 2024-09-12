@@ -65,6 +65,11 @@ function initializeElevator() {
         rightInsideDoor.style.transform = "translateX(120%)";
         leftInsideDoor.style.transition = "transform 0.8s linear";
         rightInsideDoor.style.transition = "transform 1.5s linear";
+
+        var elevatordoorsfx = new Audio('./SFX/20131106_elevator-door-closing_zoomh6xy-87444.mp3');
+        elevatordoorsfx.play()
+        elevatordoorsfx.playbackRate = 2;
+        elevatordoorsfx.volume = 0.5;
         
     }
 
@@ -75,11 +80,21 @@ function initializeElevator() {
         rightInsideDoor.style.transform = "translateX(23%)";
         leftInsideDoor.style.transition = "transform 0.7s linear 0.8s";
         rightInsideDoor.style.transition = "transform 1.5s linear";
+
+        var elevatordoorsfx = new Audio('./SFX/20131106_elevator-door-closing_zoomh6xy-87444.mp3');
+        elevatordoorsfx.play()
+        elevatordoorsfx.playbackRate = 2;
+        elevatordoorsfx.volume = 0.5;
     }
 
     function onTransitionEnd(event) {
         if (event.propertyName === 'transform') {
             if (!doorsOpen) {
+
+                var elevatorliftsfx = new Audio('./SFX/elevator-sound-99315.mp3');
+                elevatorliftsfx.play();
+                elevatorliftsfx.volume = 0.2;
+
                 // When doors are closing
                 if (!shakeInProgress) {
                     shakeInProgress = true; // Indicate shaking is in progress
@@ -87,7 +102,7 @@ function initializeElevator() {
 
                     setTimeout(() => {
                         startElevatorShake(); // Trigger the second shake after 2 seconds
-
+                        
                         setTimeout(() => {
                             openElevatorInside();
                             doorsOpen = true;
@@ -95,7 +110,10 @@ function initializeElevator() {
                             transitionInProgress = false;
                             shakeInProgress = false;
                         }, 500); // Short delay after the second shake before opening doors
-                    }, 2000); // Wait 2 seconds before the second shake
+
+                        
+
+                    }, 5000); // Wait 5 seconds before the second shake
                     console.log("the door is open: " + doorsOpen);
                 }
                 
