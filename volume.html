@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volume Controller</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.volume-container {
+    display: flex;
+    align-items: center;
+}
+
+button {
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.bar-container {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    border: 3px solid #007bff;
+    margin: 0 10px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.bar {
+    width: 8%;
+    background-color: #007bff;
+    height: 100%;
+    border-radius: 3px;
+    margin: 0 2px;
+}
+
+</style>
+<body>
+    <div class="volume-controller">
+        <button id="minus">-</button>
+        <div class="bar-container" id="barContainer">
+            <!-- Bars will be added here dynamically -->
+        </div>
+        <button id="plus">+</button>
+    </div>
+
+
+    <script>
+    const maxBars = 10;
+    let currentVolume = 1;
+
+    const barContainer = document.getElementById('barContainer');
+    const minusButton = document.getElementById('minus');
+    const plusButton = document.getElementById('plus');
+
+    // Function to update the volume display
+    function updateBars() {
+        barContainer.innerHTML = ''; // Clear existing bars
+        for (let i = 0; i < currentVolume; i++) {
+            const bar = document.createElement('div');
+            bar.classList.add('bar');
+            barContainer.appendChild(bar);
+        }
+    }
+
+    // Decrease volume
+    minusButton.addEventListener('click', () => {
+        if (currentVolume > 1) {
+            currentVolume--;
+            updateBars();
+        }
+    });
+
+    // Increase volume
+    plusButton.addEventListener('click', () => {
+        if (currentVolume < maxBars) {
+            currentVolume++;
+            updateBars();
+        }
+    });
+
+    // Initialize with 1 bar
+    updateBars();
+</script>
+</body>
+</html>

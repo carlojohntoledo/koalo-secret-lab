@@ -33,15 +33,41 @@ function initializeElevator() {
         });
     });
 
+
+
     function startScan() {
+
+        
+
         console.log("startScan function called");
-        if (transitionInProgress || !selectedFloor) return; // Check if a floor is selected
+        if (transitionInProgress || !selectedFloor)
+        {
+            var errorsfx = new Audio('./SFX/incorrect-buzzer-sound-147336.mp3')
+            errorsfx.play()
+            errorsfx.playbackRate = 1.5;
+
+            scanner.classList.add("error");
+            setTimeout(() => {
+                scanner.classList.remove("error");
+            }, 2000);
+            
+            console.log("No destination selected!")
+            return;
+        }
+
+        var scansfx = new Audio('./SFX/high-tech-spectral-creature-194036.mp3');
+        scansfx.play();
 
         transitionInProgress = true;
         scanner.classList.add('active');
-
+        console.clear();
+        console.log(selectedFloor.id + " is selected.")
         scanline.addEventListener('transitionend', function() {
             toggleElevatorDoors();
+
+            
+        
+
             scanner.classList.remove('active');
         }, { once: true });
     }
