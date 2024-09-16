@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="Stylesheets/character.css">
     <link rel="stylesheet" href="Stylesheets/animation.css">
     <link rel="stylesheet" href="Stylesheets/puzzle.css">
+    <link rel="stylesheet" href="Stylesheets/settings-menu.css">
     <title>Koalo's Secret Lab</title>
 </head>
 <body>
@@ -123,10 +124,55 @@
     </div>
   </div>
 
-  <button class="fullscreen-button" id="fullscreenButton">
-    <div class="sign"></div>
-    <div class="text">Enter Fullscreen</div>
-  </button>
+  
+    <div class="settings-btn" id="settings-btn">
+      
+        <div class="sign"></div>
+        <div class="text">Settings</div>
+    </div>
+
+    
+    <div class="settings-container" id="settings-container">
+      
+      <div class="settings-background" id="settings-background"></div>
+      <div class="settings-canvas"></div>
+        <div class="ext-btn" id="ext-btn">X</div>
+
+        <div class="settings-label">SETTINGS</div>
+
+        <div class="options">
+            <div class="sfx-volume">SFX-VOLUME
+              <div class="sfx-volume-container">
+                <button id="sfxminus">-</button>
+                <div class="sfxbar-container" id="sfxBarContainer">
+                    <!-- Bars will be added here dynamically -->
+                </div>
+                <button id="sfxplus">+</button>
+            </div>
+            </div>
+
+
+            <div class="bgm-volume">BGM VOLUME
+              <div class="bgm-volume-container">
+                <button id="bgmminus">-</button>
+                <div class="bgmbar-container" id="bgmBarContainer">
+                    <!-- Bars will be added here dynamically -->
+                </div>
+                <button id="bgmplus">+</button>
+            </div>
+            </div>
+
+
+            <div class="fullscreen-btn">ENABLE FULLSCREEN</div>
+        </div>
+
+        <div class="settings-footer">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore debitis pariatur qui vel neque, iure 
+            architecto rem quam esse illo illum, consequuntur, libero laudantium quas. Magnam pariatur illum sequi quae.
+        </div>
+        
+    </div>
+    
 
 
   
@@ -142,5 +188,6 @@
   <script src="Scripts/puzzle.js"></script>
   <script src="Scripts/BackgroundScroll.js"></script>
   <script src="Scripts/main.js"></script>
+  <script src="Scripts/settings.js"></script>
 </body>
 </html>

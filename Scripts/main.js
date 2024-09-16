@@ -175,3 +175,41 @@ function preloadRemainingResources() {
 
     return Promise.all(promises);
 }
+
+
+
+const bgMusic = new Audio('./SFX/StockTune-Dreaming Seoul Autumn Memories_1726033245.mp3');
+const clickSfx = new Audio('./SFX/click-sound.mp3'); // replace with the correct path to your click SFX file
+document.addEventListener('DOMContentLoaded', function() {
+    // Load the click sound effect
+    
+    
+    // Load the background music
+     // replace with the correct path to your background music file
+    bgMusic.loop = true; // Enable looping for the background music
+    
+
+    // Function to start background music and handle clicks
+    const startAudio = () => {
+        bgMusic.play(); // Start background music
+        bgMusic.volume = bgmcurrentVolume / maxBars;
+        document.addEventListener('click', function() {
+            // Play the click sound effect on every click
+            clickSfx.currentTime = 0; // Rewind to the start for consecutive clicks
+            clickSfx.play();
+        });
+
+        // Remove the first click listener after it fires once
+        document.removeEventListener('click', startAudio);
+    };
+
+    // Start the audio on the first click (or any interaction)
+    document.addEventListener('click', startAudio);
+});
+
+
+
+
+
+
+// Song by <a href="https://stocktune.com/free-music/dreaming-seoul-autumn-memories-160762-104708">StockTune</a>

@@ -1,5 +1,5 @@
 
-const pageContent = document.getElementById('page-content')
+
 
 function enterElevator(event) {
     if (event.propertyName === 'transform') {
