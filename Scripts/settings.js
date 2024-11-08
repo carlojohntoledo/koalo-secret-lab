@@ -10,12 +10,14 @@
 
         function showSettings()
         {
+            settingsbtn.style.display = 'none';
             settingscont.style.display = 'flex';
             settingsbg.style.backdropFilter = 'brightness(60%)';
         }
 
         function hideSettings()
         {
+            settingsbtn.style.display = 'flex';
             settingscont.style.display = 'none';
             settingsbg.style.backdropFilter = 'brightness(100%)';
         }

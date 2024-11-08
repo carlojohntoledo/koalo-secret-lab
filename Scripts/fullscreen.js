@@ -30,11 +30,11 @@ function handleButtonClick() {
         !document.webkitFullscreenElement && // Chrome, Safari and Opera
         !document.msFullscreenElement) { // IE/Edge
         goFullscreen();
-        fullscreenButton.innerHTML = `<div class="sign"></div>
+        fullscreenButton.innerHTML = `
         <div class="text">Exit Fullscreen</div>`;
     } else {
         exitFullscreen();
-        fullscreenButton.innerHTML = `<div class="sign"></div>
+        fullscreenButton.innerHTML = `
         <div class="text">Enter Fullscreen</div>`;
     }
 }
@@ -42,10 +42,10 @@ function handleButtonClick() {
 // Initialize the button text based on current fullscreen state
 function updateFullscreenButton() {
     if (document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.msFullscreenElement) {
-        fullscreenButton.innerHTML = `<div class="sign"></div>
+        fullscreenButton.innerHTML = `
         <div class="text">Exit Fullscreen</div>`;
     } else {
-        fullscreenButton.innerHTML = `<div class="sign"></div>
+        fullscreenButton.innerHTML = `
         <div class="text">Enter Fullscreen</div>`;
     }
 }
